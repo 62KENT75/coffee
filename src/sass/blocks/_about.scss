@@ -1,0 +1,19 @@
+.about {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    &__title {
+        font-size: 24px;
+        text-align: center;
+    }
+    &__logo {
+        display: block;
+        margin: 20px auto;
+    }
+    &__descr {
+        display: block;
+        margin: 40px auto;
+        max-width: 590px;
+        font-size: 14px;
+        text-align: center;
+    }
+}

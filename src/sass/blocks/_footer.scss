@@ -1,0 +1,29 @@
+.footer {
+    position: relative;
+    padding-top: 52px;
+    padding-bottom: 20px;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        max-width: 355px;
+        margin: 0 auto;
+        list-style-type: none;
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+    }
+    &__link-text {
+        font-size: 12px;
+        font-weight: normal;
+    }
+    &__link-logo {
+        position: absolute;
+        margin: -22px -40px;
+    }
+    &__logo {
+        display: block;
+        margin: 30px auto;
+    }
+}

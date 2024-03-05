@@ -1,0 +1,35 @@
+.head {
+    padding-top: 52px;
+    padding-bottom: 85px;
+    position: relative;
+    background: url('../../img/bg/header_bg.jpg') center center/cover no-repeat;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        padding-left: 150px;
+        max-width: 355px;
+        list-style-type: none;
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+    }
+    &__link {
+        font-size: 12px;
+        color: #FFFFFF;
+        &-text {
+            font-size: 12px;
+            font-weight: normal;
+        }
+        &-logo {
+            position: absolute;
+            margin: -22px -40px;
+        }
+    }
+    &__title {
+        margin-top: 60px;
+        text-align: center;
+        color:#FFFFFF;
+    }
+}

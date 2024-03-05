@@ -1,0 +1,68 @@
+.choise {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    &__search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_input-label {
+            font-size: 14px;
+        }
+        &_input-text {
+            text-align: center;
+            margin-right: 83px;
+            margin-left: 20px;
+        }
+    }
+    &__tab_first {
+        font-size: 14px;
+        margin-right: 35px;
+    }
+    &__tablink {
+        background-color: #fff;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        margin-right: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        :hover {
+            background-color: #ddd;
+        }
+    }
+    &__items {
+        display: grid;
+        padding-top: 60px;
+        grid-template-columns: repeat(3, 260px);
+        column-gap: 70px;
+        row-gap: 60px;
+        justify-content: center;
+        align-content: center;
+    }
+    &__item {
+        display: grid;
+        row-gap: 14px;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        &-img {
+            display: block;
+            margin: 37px auto 0;
+        }
+        &-descr {
+            font-size: 14px;
+            text-align: center;
+        }
+        &-text {
+            margin-right: 27px;
+            font-size: 14px;
+            text-align: right;
+        }
+        &-price {
+            margin-right: 27px;
+            padding-bottom: 22px;
+            font-size: 14px;
+            text-align: right;
+        }
+    }
+}
