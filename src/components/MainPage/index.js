@@ -18,10 +18,14 @@ function Main(props) {
                             </a>
                         </li>
                         <li onClick={() => props.onChangePage('about')} className="menu__link">
-                            <a href="#">Our coffee</a>
+                            <a href="#">
+                                <h2 className="menu__link-text">Our coffee</h2>
+                            </a>
                         </li>
                         <li onClick={() => props.onChangePage('pleasure')} className="menu__link">
-                            <a href="#">For your pleasure</a>
+                            <a href="#">
+                                <h2 className="menu__link-text">For your pleasure</h2>
+                            </a>
                         </li> 
                     </ul>
                 </nav>

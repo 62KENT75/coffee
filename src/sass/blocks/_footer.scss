@@ -14,13 +14,22 @@
             text-decoration: none;
         }
     }
-    &__link-text {
+    &__link {
         font-size: 12px;
-        font-weight: normal;
-    }
-    &__link-logo {
-        position: absolute;
-        margin: -22px -40px;
+        color: #FFFFFF;
+        cursor: pointer;
+        :hover {
+            transition: 0.3s all;
+            color: orangered;
+        }
+        &-text {
+            font-size: 12px;
+            font-weight: normal;
+        }
+        &-logo {
+            position: absolute;
+            margin: -22px -40px;
+        }
     }
     &__logo {
         display: block;

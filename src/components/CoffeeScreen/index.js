@@ -4,7 +4,6 @@ import coffee from "../../img/photo/choiseCoffee.jpg"
 import blackBeans from "../../icons/logo/beans_logo.svg";
 
 function Coffee({selectedItem, onChangePage}) {
-    console.log(selectedItem)
     return(
         <>
             <Header onChangePage={onChangePage}/>

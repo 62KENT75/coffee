@@ -17,7 +17,6 @@ function App() {
   const handleSelectItem = (pickedCard) => {
     setSelectedItem(pickedCard);
     handleChangePage('coffee');
-    console.log(pickedCard);
   }
 
 
@@ -29,7 +28,7 @@ function App() {
     {activePage === 'main' && <MainPage onChangePage={handleChangePage}/>}
     {activePage === 'about' && <SecondScreen onChangePage={handleChangePage} onSelectedItem={handleSelectItem}/>}
     {activePage === 'coffee' && <CoffeeScreen onChangePage={handleChangePage} selectedItem={selectedItem}/>}
-    {activePage === 'pleasure' && <YourPleasureScreen onChangePage={handleChangePage} selectedItem={selectedItem}/>}
+    {activePage === 'pleasure' && <YourPleasureScreen onChangePage={handleChangePage} onSelectedItem={handleSelectItem}/>}
     {/* <CoffeeScreen/> */}
     </>
   );

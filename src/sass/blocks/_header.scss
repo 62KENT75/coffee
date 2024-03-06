@@ -24,6 +24,10 @@
     &__link {
         font-size: 12px;
         color: #FFFFFF;
+        :hover {
+            transition: 0.3s all;
+            color: green;
+        }
         &-text {
             font-size: 12px;
             font-weight: normal;
