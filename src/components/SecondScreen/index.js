@@ -4,10 +4,23 @@ import Header from "../Header";
 import CardItemChoise from "../CardItemChoise";
 import { cardChoiseData } from "../../data/cardChoiseData";
 import Footer from "../Footer";
-function About() {
+import { useState } from "react";
+
+function About({onChangePage, onSelectedItem}) {
+    const [value, setValue] = useState('');
+    const [data, setData] = useState(cardChoiseData);
+    const handleChangeInput = (changeInput) => {
+        setValue(changeInput.target.value);
+        setData(cardChoiseData.filter((item) => item.descr.toLowerCase().includes(changeInput.target.value?.toLowerCase() || '')));
+        console.log(value);
+    }
+    const handleChangeCountry = (country) => {
+        setData(cardChoiseData.filter((item) => item.country.toLowerCase().includes(country.toLowerCase())))
+    }
+    
     return(
         <>
-            <Header/>
+            <Header onChangePage={onChangePage}/>
             <div className="information">
                 <img src={girl} alt="girl" className="information__img"/>
                 <div className="information__text">
@@ -34,20 +47,21 @@ function About() {
                 <div className="choise__search">
                     <div className="choise__search_input">
                         <label htmlFor="myInput" className="choise__search_input-label">Lookiing for</label>
-                        <input id = "myInput" type="text" placeholder="start typing here..." className="choise__search_input-text"/>
+                        <input id = "myInput" value={value} type="text" placeholder="start typing here..." onChange={handleChangeInput} className="choise__search_input-text"/>
                     </div>
                     <div className="choise__tabs">
                         <label htmlFor="firstTab" className="choise__tab_first">Or filter</label>
-                        <button id="firstTab" className="choise__tablink">Brazil</button>
-                        <button className="choise__tablink">Kenya</button>
-                        <button className="choise__tablink">Columbia</button>
+                        <button id="firstTab" className="choise__tablink" onClick={() => handleChangeCountry('Brazil')}>Brazil</button>
+                        <button id="secondTab" className="choise__tablink" onClick={() => handleChangeCountry('Kenya')}>Kenya</button>
+                        <button id="thirdTab" className="choise__tablink" onClick={() => handleChangeCountry('Columbia')}>Columbia</button>
                     </div>
                 </div>
                 
-                
                 <div className="choise__items">
-                    {cardChoiseData.map((item) => (
+                    {data.map((item, i) => (
                         <CardItemChoise
+                        onSelectedItem={onSelectedItem}
+                        key={i}
                         img={item.img}
                         descr={item.descr}
                         country={item.country}
@@ -56,7 +70,7 @@ function About() {
                     ))}
                 </div>
             </div>
-            <Footer/>
+            <Footer onChangePage={onChangePage}/>
         </>
     );
 }

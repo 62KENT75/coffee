@@ -4,36 +4,37 @@ import whiteBeans from "../../icons/logo/white_beans.svg";
 import CardItem from "../CardItem";
 import { cardData } from "../../data/cardData";
 import Footer from '../Footer';
-function Main() {
+
+function Main(props) {
     return (
         <div>
             <div className="menu">
                 <nav>
                     <ul className="menu__list">
-                        <li className="menu__link">
+                        <li onClick={() => props.onChangePage('main')} className="menu__link">
                             <a href="#">
                                 <img src={logo} alt="logo" className="menu__link-logo"/>
                                 <h2 className="menu__link-text">Coffee house</h2>
                             </a>
                         </li>
-                        <li className="menu__link">
+                        <li onClick={() => props.onChangePage('about')} className="menu__link">
                             <a href="#">Our coffee</a>
                         </li>
-                        <li className="menu__link">
+                        <li onClick={() => props.onChangePage('pleasure')} className="menu__link">
                             <a href="#">For your pleasure</a>
                         </li> 
                     </ul>
                 </nav>
 
-                <div className="information">
-                    <h1 className="information__title">Everything You Love About Coffee</h1>
-                    <img src={whiteBeans} alt="beans" className="information__logo"/>
-                    <h2 className="information__descr">
+                <div className="description">
+                    <h1 className="description__title">Everything You Love About Coffee</h1>
+                    <img src={whiteBeans} alt="beans" className="description__logo"/>
+                    <h2 className="description__descr">
                         We makes every day full of energy and taste
                         <br></br>
                         Want to try our beans?
                     </h2>
-                    <button className="information__btn">More</button>
+                    <button className="description__btn">More</button>
                 </div>
             </div>
 
@@ -59,8 +60,9 @@ function Main() {
             <div className="recommended">
                 <h2 className="recommended__title">Our best</h2>
                 <div className="recommended__items">
-                    {cardData.map((item) => (
+                    {cardData.map((item, i) => (
                         <CardItem
+                        key={i}
                         img={item.img}
                         descr={item.descr}
                         price={item.price}
@@ -69,7 +71,7 @@ function Main() {
                 </div>
             </div>
 
-            <Footer/>
+            <Footer onChangePage={props.onChangePage}/>
         </div>
     );
 }

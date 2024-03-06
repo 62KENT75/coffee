@@ -1,7 +1,7 @@
-function CardItemChoise({img, descr, country, price}) {
+function CardItemChoise({img, descr, country, price, onSelectedItem}) {
     return(
         <>
-            <div className="choise__item">
+            <div className="choise__item" onClick={() => onSelectedItem({img, descr, country, price})}>
                 <img src={img} alt="card" className="choise__item-img"/>
                 <p className="choise__item-descr">{descr}</p>
                 <p className="choise__item-text">{country}</p>

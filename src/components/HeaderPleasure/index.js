@@ -1,9 +1,9 @@
 import logo from "../../icons/logo/main_logo.png";
 
-function Header(props) {
+function HeaderPleasure(props) {
     return(
         <>
-            <div className="head">
+            <div className="head__last">
                 <nav>
                     <ul className="head__list">
                         <li onClick={() => props.onChangePage('main')} className="head__link">
@@ -21,10 +21,10 @@ function Header(props) {
                     </ul>
                 </nav>
 
-                <h1 className="head__title">Our Coffee</h1>
+                <h1 className="head__title">For your pleasure</h1>
             </div>
         </>
     );
 }
 
-export default Header;
+export default HeaderPleasure;

@@ -1,0 +1,36 @@
+.coffee {
+    padding-top: 70px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 420px);
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px;
+    &__img {
+        margin: 0 auto;
+    }
+    &__text {
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 20px;
+        &_title {
+            font-size: 24px;
+            text-align: center;
+        }
+        &_logo {
+            margin: 0 auto;
+        }
+        &_descr {
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+}
+
+.bold {
+    font-weight: bold;
+    &__price {
+        font-size: 24px;
+    }
+}

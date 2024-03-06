@@ -8,12 +8,14 @@
     width: 240px;
     height: 1px;
     background-color: black;
-    margin: 60px auto 0;
+    margin: 0 auto ;
 }
 @import 'blocks/menu';
 @import 'blocks/about';
 @import 'blocks/recommended';
 @import 'blocks/information';
+@import 'blocks/description';
 @import 'blocks/choise';
+@import 'blocks/coffee';
 @import 'blocks/header';
 @import 'blocks/footer';
